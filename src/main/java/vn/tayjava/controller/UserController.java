@@ -3,6 +3,7 @@ package vn.tayjava.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import vn.tayjava.dto.request.AddressDTO;
 import vn.tayjava.dto.request.UserDTO;
 import vn.tayjava.entity.User;
 import vn.tayjava.service.UserService;
@@ -24,7 +25,7 @@ public class UserController {
         userDTO.setFirstName(user.getFirstName());
         userDTO.setLastName(user.getLastName());
         userDTO.setEmail(user.getEmail());
-        // Set AddressDTO nếu cần
+
         return ResponseEntity.ok(userDTO);
     }
 
